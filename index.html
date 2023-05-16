@@ -22,6 +22,23 @@
 	<!-- End Google Tag Manager -->
 	<title>トップ | 翻訳デモ</title>
 	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-RR1XPKHMZ9');
+	  </script>
+	  <script src="https://sandbox-d.ea-shutto-translation.net/trans.js?id=21309"></script>
+		  <script>
+			  __stt.on('setLangHit', function(event) {
+				console.log("lang: %o ",event.lang)
+				console.log("gtag: %o ",gtag)
+				
+				  gtag('event','shuttotrans_set_lang', {
+					  'shuttotrans_lang': event.lang
+				  });
+			  });
+		  </script>
+	<script>
 		console.log("other script")
 	</script>
 </head>
