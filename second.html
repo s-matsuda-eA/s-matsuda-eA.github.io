@@ -15,6 +15,10 @@
 	<!-- End Google Tag Manager -->
 	<title>セカンド | 翻訳デモ</title>
 	<script src="https://d.shutto-translation.com/trans.js?id=22629"></script>
+	<script type="text/javascript">
+		__stt.on("setLangHit",function(a){console.log("lang: %o ",a.lang);
+		gtag("event","shuttotrans_set_lang",{shuttotrans_lang:a.lang})});
+	</script>	
 	<script>
 		console.log("other script")
 	</script>
