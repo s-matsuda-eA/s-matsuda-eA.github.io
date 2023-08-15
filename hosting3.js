@@ -1,11 +1,16 @@
 $(function () {
-  $.ajax({
-    type: "GET",
-    url: "https://s-matsuda-ea.github.io/stt-sandbox-demosite/%E6%97%A5%E6%9C%AC%E8%AA%9E.html",
-  })
-    .done(function () {})
-    .fail(function () {})
-    .always(function (result) {
-      window.alert("結果 %o", result);
-    });
+  // url生成
+  const originalUrl = $("link[rel='alternate'][hreflang='ja']");
+  console.log(originalUrl);
+  let requestUrl = "";
+
+  // $.ajax({
+  //   type: "GET",
+  //   url: requestUrl,
+  // })
+  //   .done(function () {})
+  //   .fail(function () {})
+  //   .always(function (result) {
+  //     console.log("結果 %o", result);
+  //   });
 });
