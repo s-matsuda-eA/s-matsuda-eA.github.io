@@ -5,7 +5,7 @@ $(function () {
   const alternateJa = $("link[rel='alternate'][hreflang='ja']");
   const requestUrl = alternateJa
     ? new URL(requestPath, alternateJa.attr("href"))
-    : new URL(requestPath, new URL(location.href));
+    : new URL(requestPath, location.href);
 
   console.log("requestURL %o", requestUrl);
 
