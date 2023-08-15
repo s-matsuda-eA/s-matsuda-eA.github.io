@@ -1,7 +1,7 @@
 $(function () {
   // url生成
   const originalUrl = $("link[rel='alternate'][hreflang='ja']");
-  console.log(originalUrl);
+  console.log(originalUrl.attr("href"));
   let requestUrl = "";
 
   // $.ajax({
