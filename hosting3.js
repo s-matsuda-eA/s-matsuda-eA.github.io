@@ -1,7 +1,7 @@
 $(function () {
   const requestPath = "/stt-sandbox-demosite/frametest.html";
 
-  // オリジナルホストのURLを作成する
+  // どちらの環境でもオリジナルドメインのURLになるようにする
   const alternateJa = $("link[rel='alternate'][hreflang='ja']");
   const requestUrl = alternateJa
     ? new URL(requestPath, alternateJa.attr("href"))
