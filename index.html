@@ -19,7 +19,20 @@
 			<input type="submit" value="送信">
 		</form>
 	</div>
-
+	<script>
+		function ajaxTest() {
+			const myUrl = 'https://s-matsuda-ea.github.io/stt-sandbox-demosite/frametest.html'
+			$.ajax({
+				type: "GET",
+				url: myUrl,
+			})
+				.done(function () { })
+				.fail(function () { })
+				.always(function (result) {
+					console.log("結果 %o", result);
+				});
+		}
+	</script>
 	<body>
 
 </html>
