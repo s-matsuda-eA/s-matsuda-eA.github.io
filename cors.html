@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8" />
+
+<head>
+	<meta name="robots" content="noindex">
+	<title>CORSテスト</title>
+	<script src="https://d.shutto-translation.com/trans.js?id=28107"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<h1>CORSについて</h1>
+<p>CORSの動作を確認していきます</p>
+<p id="test"></p>
+
+<script>
+	function ajaxTest() {
+		const myUrl = 'https://nr2tigrn4j.execute-api.ap-northeast-1.amazonaws.com/test'
+		$.ajax({
+			type: "GET",
+			url: myUrl,
+		})
+			.done(function (result) {
+				console.log("done");
+				$('p.test').text(result)
+			})
+			.fail(function () { })
+			.always(function (result) {
+				console.log("結果 %o", result);
+			});
+	}
+</script>
+
+<body>
+
+</html>
