@@ -21,8 +21,8 @@
 			url: myUrl,
 		})
 			.done(function (result) {
-				console.log("done");
-				$('p.test').text(result)
+				console.log("done %o", result);
+				$('p#test').text(result)
 			})
 			.fail(function () { })
 			.always(function (result) {
