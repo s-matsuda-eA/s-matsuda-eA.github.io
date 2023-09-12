@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8" />
+
+<head>
+	<meta name="robots" content="noindex">
+	<title>イベントフックテスト</title>
+	<script src="https://d.shutto-translation.com/trans.js?id=28107"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<h1>イベントフックテスト</h1>
+<p>動的取得のテストもします</p>
+<p id="test"></p>
+
+<script>
+	__stt.on('load', function () {
+		console.log("fire the STT load event")
+	});
+
+	__stt.on('tl.load', function () {
+		console.log("fire the STT tl.load event")
+	});
+
+	__stt.on('tl.loaded', function () {
+		console.log("fire the STT tl.loaded event")
+	});
+
+	__stt.on('lang.change', function () {
+		console.log("fire the STT lang.change event")
+	});
+
+	__stt.on('lang.changed', function () {
+		console.log("fire the STT lang.changed event")
+	});
+
+	__stt.on('selectLang', function () {
+		console.log("fire the STT selectLang event")
+	});
+
+	__stt.on('setLang', function () {
+		console.log("fire the STT setLang event")
+	});
+
+	__stt.on('setsetLangHit', function () {
+		console.log("fire the STT setLangHit event")
+	});
+
+
+	function ajaxTest() {
+		const myUrl = 'https://s-matsuda-ea.github.io/cors.html'
+		$.ajax({
+			type: "GET",
+			url: myUrl,
+		})
+			.done(function (result) {
+				$('p#test').text(result)
+			})
+			.fail(function () { })
+			.always(function (result) {
+				console.log("結果 %o", result);
+			});
+	}
+	ajaxTest();
+</script>
+
+<body>
+
+</html>
