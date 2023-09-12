@@ -10,6 +10,7 @@
 </head>
 
 <h1>イベントフックテスト</h1>
+<p id="hook-load">loadが発火しました</p>
 <p>動的取得のテストもします</p>
 <p id="test"></p>
 
@@ -17,6 +18,7 @@
 	__stt.on('load', function () {
 		console.log("fire the STT load event")
 		alert("test")
+		p('hook-load').text("loadイベントがｓ発火しました")
 	});
 
 	__stt.on('tl.load', function () {
