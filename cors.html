@@ -7,6 +7,13 @@
 	<title>CORSテスト</title>
 	<script src="https://d.shutto-translation.com/trans.js?id=30030"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		__stt.on('setLangHit', function (event) {
+			gtag('event', 'shuttotrans_set_lang', {
+				'shuttotrans_lang': event.lang
+			});
+		});
+	</script>
 </head>
 
 <h1>CORSについて</h1>
