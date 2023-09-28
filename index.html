@@ -6,7 +6,6 @@
 	<meta name="robots" content="noindex">
 
 	<title>hostingテスト</title>
-	<script src="https://d.shutto-translation.com/trans.js?id=30030"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="/hosting3.js"></script>
 	<script src="/hosting2.js"></script>
@@ -14,27 +13,20 @@
 
 	<h1>hostingテストデモトップ</h1>
 	<p>翻訳機能検証デモサイトトップ</p>
-	<img src="sample.png" alt="画像1">
-	<a href="https://s-matsuda-ea.github.io/hosting.js">リンク</a>
-	<div data-stt-ignore>
-		<form action="https://s-matsuda-ea.github.io/stt-sandbox-demosite/frametest.html" method="GET" data-stt-ignore>
-			<input type="submit" value="送信">
-		</form>
+	<div id="dis" style="display: none;">
+		<p>インラインで隠します</p>
 	</div>
+	<img src="sample.png" alt="画像1">
 	<script>
-		function ajaxTest() {
-			const myUrl = 'https://s-matsuda-ea.github.io/stt-sandbox-demosite/frametest.html'
-			$.ajax({
-				type: "GET",
-				url: myUrl,
-			})
-				.done(function () { })
-				.fail(function () { })
-				.always(function (result) {
-					console.log("結果 %o", result);
-				});
-		}
+						setTimeout(function () {
+							let delaycss = document.createElement('link');
+							delaycss.rel = 'stylesheet';
+							delaycss.href = 'add.css';
+							document.head.appendChild(delaycss);
+						}, 1500)
+
 	</script>
+
 	<body>
 
 </html>
