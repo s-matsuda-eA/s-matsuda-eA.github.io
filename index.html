@@ -10,24 +10,29 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
-	<h1>hostingテストデモトップ</h1>
-	<p>翻訳機能検証デモサイトトップ</p>
-	<div id="dis" style="display: none;">
-		<span>インラインで隠します</span>
-		<p>インラインで<span>隠し</span>ます</p>
-	</div>
-<div id="sec" style="display: none;">
-	<span>display none自体は関係なさそう</span>
-</div>
-	<img src="sample.png" alt="画像1">
-	<script>
+	<h1>タグの組み合わせてすと</h1>
+	<dl>
+		<dt>アイテム1</dt>
+		<dd class="item_detail">
+			<span>スパンで<span>スパンを囲ってくスタイル</span></span>
+		</dd>
+		<dd class="item_buy">
+			<a class="cart_in" slpid="xxx">追加します？</a>
+			<span class="productInfo" style="display:none">
+				<span class="cartinImg">//itemimg-plm.adss-sys.com/itemimg/PL020/A0PL0000O0F4/02_PDQ-240.jpg</span><span
+					class="vcaName">M</span>/<span class="vcbName">モカ茶</span>
+			</span>
+		</dd>
+	</dl>
+	
+	<!-- <script>
 						setTimeout(function () {
 							let delaycss = document.createElement('link');
 							delaycss.rel = 'stylesheet';
 							delaycss.href = 'add.css';
 							document.head.appendChild(delaycss);
 						}, 1500)
-	</script>
+	</script> -->
 
 	<body>
 
