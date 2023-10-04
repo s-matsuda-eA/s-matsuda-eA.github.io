@@ -45,6 +45,15 @@
             `
 						$('.view-target').append(template)
 					}, 3000)
+					setTimeout(function () {
+						const template = `
+            <div class="inner-wrap">
+              <li><div><p>一個<p></div></li>
+              <li><div><p>二個<p></div></li>
+            </div>
+            `
+						$('.view-target ul').append(template)
+					}, 6000)
 				})
 				.fail(function () { })
 				.always(function (result) {

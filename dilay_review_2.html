@@ -3,7 +3,6 @@
 
 <head>
 	<title>動的要素テスト</title>
-	<script src="https://sandbox-d.ea-shutto-translation.net/trans.js?id=29626"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="keywords" content="">
@@ -14,11 +13,14 @@
 
 <body>
 
-	<h1>動的要素テスト</h1>
-	<p>コンテナに要素をいれてそこから動かしたらどうなるかテストします</p>
-
-	<div id="container1">
-	</div>
+	<h1>動的要素テスト２つめ</h1>
+	<p>遅延読み込みテスト</p>
+	<section class="view-target">
+		<h2>時間差表示</h2>
+		<div class="list-wrapper">
+			<ul class="scroll-append-list"></ul>
+		</div>
+	</section>
 
 
 	<script>
@@ -35,15 +37,32 @@
 				url: myUrl,
 			})
 				.done(function (result) {
-					$('p#test').text(result)
-					// setTimeoutで遅延読み込み
+					setTimeout(function () {
+						const template = `
+            <style>
+              .view-target {
+                color: red;
+              }
+            </style>
+            <div class="inner-wrap">
+              <li><div><p>一個<p></div></li>
+              <li><div><p>二個<p></div></li>
+            </div>
+            `
+						$('.view-target').append(template)
+					}, 3000)
+					setTimeout(function () {
+						const script = document.createElement('script')
+						script.src = "https://sandbox-d.ea-shutto-translation.net/trans.js?id=29626"
+						document.head.appendChild(script)
+					}, 6000)
 				})
 				.fail(function () { })
 				.always(function (result) {
-				});
+				})
 		}
 
-		// ajaxTest();
+			ajaxTest()
 	</script>
 </body>
 
