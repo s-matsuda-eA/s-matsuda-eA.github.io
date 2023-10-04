@@ -16,10 +16,12 @@
 
 	<h1>動的要素テスト</h1>
 	<p>コンテナに要素をいれてそこから動かしたらどうなるかテストします</p>
-
-	<div id="container1">
-	</div>
-
+	<section class="view-target">
+		<h2>時間差表示</h2>
+		<div class="list-wrapper">
+			<ul class="scroll-append-list"></ul>
+		</div>
+	</section>
 
 	<script>
 		function ajaxTest() {
@@ -29,18 +31,20 @@
 				url: myUrl,
 			})
 				.done(function (result) {
+					setTimeout(function () {
 					const template = `
             <style>
-              #container1 {
+              .view-target {
                 color: red;
               }
             </style>
             <div class="inner-wrap">
-              <li><div><p>リストアイテムひとつめ<p></div></li>
-              <li><div><p>リストアイテムふたつめ<p></div></li>
+              <li><div><p>一個<p></div></li>
+              <li><div><p>二個<p></div></li>
             </div>
             `
-					$('#container1').append(template)
+						$('.view-target').append(template)
+					}, 3000)
 				})
 				.fail(function () { })
 				.always(function (result) {
