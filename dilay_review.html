@@ -47,12 +47,10 @@
 					}, 3000)
 					setTimeout(function () {
 						const template = `
-            <div class="inner-wrap">
-              <li><div><p>一個<p></div></li>
-              <li><div><p>二個<p></div></li>
-            </div>
+              <li><div><p>三個<p></div></li>
+              <li><div><p>四個<p></div></li>
             `
-						$('.view-target ul').append(template)
+						$('ul.scroll-append-list').append(template)
 					}, 6000)
 				})
 				.fail(function () { })
