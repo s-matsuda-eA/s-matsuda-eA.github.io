@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>動的要素テスト</title>
+	<script src="https://sandbox-d.ea-shutto-translation.net/trans.js?id=29626"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="">
+	<meta name="robots" content="noindex">
+</head>
+
+<body>
+
+	<h1>動的要素テスト</h1>
+	<p>コンテナに要素をいれてそこから動かしたらどうなるかテストします</p>
+
+	<div id="container1">
+	</div>
+
+
+	<script>
+		function loadSTT() {
+			const script = document.createElement('script')
+			script.src = "https://sandbox-d.ea-shutto-translation.net/trans.js?id=29626"
+			document.head.appendChild(script)
+		}
+
+		function ajaxTest() {
+			const myUrl = 'https://s-matsuda-ea.github.io/cors.html'
+			$.ajax({
+				type: "GET",
+				url: myUrl,
+			})
+				.done(function (result) {
+					$('p#test').text(result)
+					// setTimeoutで遅延読み込み
+				})
+				.fail(function () { })
+				.always(function (result) {
+				});
+		}
+
+		// ajaxTest();
+	</script>
+</body>
+
+</html>
