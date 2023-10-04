@@ -29,7 +29,18 @@
 				url: myUrl,
 			})
 				.done(function (result) {
-					$('#container1').html("<div><div><p>諸々入る</p></div><style> #container1 { color: blue; }</style></div>")
+					const template = `
+            <style>
+              #container1 {
+                color: red;
+              }
+            </style>
+            <div class="inner-wrap">
+              <li><div><p>リストアイテムひとつめ<p></div></li>
+              <li><div><p>リストアイテムふたつめ<p></div></li>
+            </div>
+            `
+					$('#container1').append(template)
 				})
 				.fail(function () { })
 				.always(function (result) {
