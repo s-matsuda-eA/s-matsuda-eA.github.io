@@ -19,7 +19,7 @@
 	<section class="view-target">
 		<h2>時間差表示</h2>
 		<div class="list-wrapper">
-			<ul class="scroll-append-list"></ul>
+			<section class="v-container"></section>
 		</div>
 	</section>
 
@@ -39,19 +39,21 @@
               }
             </style>
             <div class="inner-wrap">
-              <li><div><p>一個<p></div></li>
-              <li><div><p>二個<p></div></li>
+							<ul>
+       	      	<li><div><p>一個<p></div></li>
+        	    	<li><div><p>二個<p></div></li>
+							</ul>
             </div>
             `
-						$('.view-target').append(template)
+						$('.v-container').append(template)
 					}, 3000)
-					setTimeout(function () {
-						const template = `
-              <li><div><p>三個<p></div></li>
-              <li><div><p>四個<p></div></li>
-            `
-						$('ul.scroll-append-list').append(template)
-					}, 6000)
+					// setTimeout(function () {
+					// 	const template = `
+					//     <li><div><p>三個<p></div></li>
+					//     <li><div><p>四個<p></div></li>
+					//   `
+					// 	$('ul.scroll-append-list').append(template)
+					// }, 6000)
 				})
 				.fail(function () { })
 				.always(function (result) {
