@@ -28,12 +28,12 @@
 		console.log("fire the STT tl.loaded event")
 	});
 
-	__stt.on('lang.change', function () {
-		console.log("fire the STT lang.change event")
+		__stt.on('lang.change', function (lang) {
+			console.log("fire the STT lang.change event: %o", lang)
 	});
 
 	__stt.on('lang.changed', function () {
-		console.log("fire the STT lang.changed event")
+		console.log("fire the STT lang.changed event: %o", lang)
 	});
 
 	__stt.on('selectLang', function () {
