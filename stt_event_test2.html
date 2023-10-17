@@ -47,26 +47,26 @@
 			console.log("fire the STT tl.loaded event")
 		});
 
-		//raw
-		__stt.get('lang', function (lang) {
-			console.log("fire the STT lang event: %o", lang)
-		});
-
-		// ContentLoaded
-		window.addEventListener('DOMContentLoaded', (event) => {
-			console.log("window load");
-			__stt.get('lang', function (lang) {
-				console.log("fire the STT lang event: %o", lang)
+				//raw
+				__stt.get('lang', function (lang) {
+				console.log("get the STT lang event: %o", lang)
 			});
-		});
 
-		// load
-		window.addEventListener("load", (event) => {
-			console.log("window load");
-			__stt.get('lang', function (lang) {
-				console.log("fire the STT lang event: %o", lang)
+				// ContentLoaded
+				window.addEventListener('DOMContentLoaded', (event) => {
+				console.log("window Contentload");
+				__stt.get('lang', function (lang) {
+					console.log("fire the STT lang event from Contentload: %o", lang)
+				});
 			});
-		});
+
+				// load
+				window.addEventListener("load", (event) => {
+					console.log("window load");
+					__stt.get('lang', function (lang) {
+					console.log("fire the STT lang event from load: %o", lang)
+				});
+			});
 
 
 		__stt.on('lang.change', function (lang) {

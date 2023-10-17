@@ -8,7 +8,7 @@
 	<script src="https://sandbox-d.ea-shutto-translation.net/trans.js?id=30516"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
-
+<body>
 <h1>イベントフックテスト</h1>
 <p id="hook-load">loadが発火しました</p>
 <p>動的取得のテストもします</p>
@@ -30,14 +30,14 @@
 
 			//raw
 			__stt.get('lang', function (lang) {
-				console.log("fire the STT lang event: %o", lang)
+				console.log("get the STT lang event: %o", lang)
 			});
 
 			// ContentLoaded
 			window.addEventListener('DOMContentLoaded', (event) => {
-				console.log("window load");
+				console.log("window Contentload");
 				__stt.get('lang', function (lang) {
-					console.log("fire the STT lang event: %o", lang)
+					console.log("fire the STT lang event from Contentload: %o", lang)
 				});
 			});
 
@@ -45,7 +45,7 @@
 			window.addEventListener("load", (event) => {
 				console.log("window load");
 				__stt.get('lang', function (lang) {
-					console.log("fire the STT lang event: %o", lang)
+					console.log("fire the STT lang event from load: %o", lang)
 				});
 			});
 		
