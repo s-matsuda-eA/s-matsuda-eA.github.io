@@ -28,6 +28,28 @@
 		console.log("fire the STT tl.loaded event")
 	});
 
+			//raw
+			__stt.get('lang', function (lang) {
+				console.log("fire the STT lang event: %o", lang)
+			});
+
+			// ContentLoaded
+			window.addEventListener('DOMContentLoaded', (event) => {
+				console.log("window load");
+				__stt.get('lang', function (lang) {
+					console.log("fire the STT lang event: %o", lang)
+				});
+			});
+
+			// load
+			window.addEventListener("load", (event) => {
+				console.log("window load");
+				__stt.get('lang', function (lang) {
+					console.log("fire the STT lang event: %o", lang)
+				});
+			});
+		
+
 		__stt.on('lang.change', function (lang) {
 			console.log("fire the STT lang.change event: %o", lang)
 			console.log("navigator langage %o", navigator.language)
@@ -36,6 +58,7 @@
 				console.log("browser lang is en")
 			}
 	});
+
 
 		__stt.on('lang.changed', function (lang) {
 		console.log("fire the STT lang.changed event: %o", lang)
