@@ -11,10 +11,7 @@
 	<script>
 		const loadSTTTags = function () {
 			// shuttoスクリプトタグ追加
-			$.ajax({
-				url: "https://d.shutto-translation.com/trans.js?id=33694",
-				dataType: 'script',
-			}).done(function () {
+			$.getScript('https://d.shutto-translation.com/trans.js?id=33694').done(function () {
 				//GA4連携イベントリスナーを追加
 				__stt.on('setLangHit', function (event) {
 					console.log("sttLangHit %o", event)
@@ -22,7 +19,7 @@
 				// 	'shuttotrans_lang': event.lang
 				// });
 				});
-			});
+			})
 		}
 
 		setTimeout(() => {
