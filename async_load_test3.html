@@ -10,18 +10,19 @@
 
 	<script>
 		const loadSTTTags = function () {
-			// shuttoスクリプトタグ追加
-			let script = document.createElement("script");
-			script.src = "https://d.shutto-translation.com/trans.js?id=33694";
+			// shuttoスクリプトタグ用要素を生成
+			let sttScript = document.createElement("script");
+			sttScript.src = "https://d.shutto-translation.com/trans.js?id=33694";
 
-			//GA4連携イベントリスナーを追加
-			script.onload = function () {
+			//導入タグのロードが完了した時点でGA4連携イベントリスナーを追加するようにsttScriptのonloadイベントに登録
+			sttScript.onload = function () {
 				__stt.on('setLangHit', function (event) {
 					console.log("sttLangHit %o", event)
 				});
 			};
 
-			document.head.appendChild(script);
+			// スクリプトタグ要素をheadに追加
+			document.head.appendChild(sttScript);
 		}
 
 		setTimeout(() => {
