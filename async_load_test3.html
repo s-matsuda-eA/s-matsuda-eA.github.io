@@ -14,14 +14,14 @@
 			$.ajax({
 				url: "https://d.shutto-translation.com/trans.js?id=33694",
 				dataType: 'script',
-			});
-
-			//GA4連携イベントリスナーを追加
-			__stt.on('setLangHit', function (event) {
-				console.log("sttLangHit %o", event)
+			}).done(function () {
+				//GA4連携イベントリスナーを追加
+				__stt.on('setLangHit', function (event) {
+					console.log("sttLangHit %o", event)
 				// gtag('event', 'shuttotrans_set_lang', {
 				// 	'shuttotrans_lang': event.lang
 				// });
+				});
 			});
 		}
 
