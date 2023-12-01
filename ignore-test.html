@@ -18,9 +18,9 @@
 	<div id="app">
 		<p class="resultTxt">
 			<span class="resultTxtSub">てきすとぶぶん</span><span class="txt"><span class="dynamicText" data-stt-ignore> {{
-					reactiveText }} </span><span class="yen">円</span></span>です
-			<br>
+				reactiveCount }} </span><span class="yen">円</span></span>です
 		</p>
+		<button @click="reactiveCount++">チェンジ</button>
 	</div>
 
 	<script>
@@ -28,9 +28,9 @@
 
 		createApp({
 			setup() {
-				const reactiveText = ref('3,000')
+				const reactiveCount = ref(0)
 				return {
-					reactiveText
+					reactiveCount
 				}
 			}
 		}).mount('#app')
