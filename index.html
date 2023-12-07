@@ -5,16 +5,20 @@
 <head>
 	<meta name="robots" content="noindex">
 	<title>色々実験場</title>
-	<script src="https://d.shutto-translation.com/trans.js?id=37051"></script>
+	<script src="https://sandbox-d.ea-shutto-translation.net/trans.js?id=36654"></script>
 	<script>
-			__stt.on('setLangHit', function () {
-			console.log("fire the STT setLangHit event")
-		});		
+				__stt.get('lang', function (lang) {
+					const GDPR_script = document.createElement('script');
+					GDPR_script.src = 'https://s-matsuda-ea.github.io/js.include.js';
+					GDPR_script.dataset.langage = lang
+					GDPR_script.async = true
+					document.head.appendChild(GDPR_scriptGDPR_script);
+				});
 	</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
-<body>
 
+<body>
 <h1>いろいろテスト</h1>
 <img src="images/sample.png" width="300">
 <p>だみーのてきすとさん</p>
