@@ -14,19 +14,22 @@
 			img_element.alt = 'てしてし';
 			img_element.width = 200; // 横サイズ（px）
 
-			let content = document.getElementById("content");
-			content.appendChild(img_element);
+			var element = document.getElementById("hoge");
+			element.appendChild(img_element);
 		}
+
+	addEventListener("load", () => {
+		rewrite();
+
+	});
+
 </script>
 </head>
 
 <body>
-	<script>
-		rewrite();
-	</script>
 	<h1>いろいろテスト</h1>
 	<p>だみーのてきすとさん</p>
-	<div id="content"></div>
+	<div id="hoge">aaa</div>
 </body>
 
 </html>
