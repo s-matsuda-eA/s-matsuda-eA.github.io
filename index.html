@@ -7,20 +7,21 @@
 	<title>色々実験場</title>
 	<script src="https://sandbox-d.ea-shutto-translation.net/trans.js?id=36654"></script>
 	<script>
-				__stt.get('lang', function (lang) {
-					const GDPR_script = document.createElement('script');
-					GDPR_script.src = 'https://s-matsuda-ea.github.io/include.js';
-					GDPR_script.dataset.langage = lang
-					GDPR_script.async = true
-					document.head.appendChild(GDPR_script);
-				});
+			function rewrite() {
+				document.open();
+				const tag = '<img src="images/sample.png" width="300">'
+				document.write(tag);
+				document.close();
+			}
 	</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
 <body>
+<script>
+	rewrite();
+</script>
 <h1>いろいろテスト</h1>
-<img src="images/sample.png" width="300">
 <p>だみーのてきすとさん</p>
 </body>
 </html>
