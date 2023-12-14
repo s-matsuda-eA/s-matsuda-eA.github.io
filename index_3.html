@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8" />
+
+<head>
+	<meta name="robots" content="noindex">
+	<title>色々実験場-遅延読み込み</title>
+	<script>
+		function rewrite() {
+			document.open();
+			const tag = '<img src="images/sample.png" width="300">'
+			document.write(tag);
+			document.close();
+		}
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<script>
+		rewrite();
+	</script>
+	<h1>いろいろテスト</h1>
+	<p>だみーのてきすとさん</p>
+
+	<script src="https://sandbox-d.ea-shutto-translation.net/trans.js?id=36654"></script>
+</body>
+
+</html>
