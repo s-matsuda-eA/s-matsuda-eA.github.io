@@ -10,7 +10,7 @@
 <script>
 		function rewrite() {
 			document.open();
-			const tag = '<img src="images/sample.png" width="300">'
+			const tag = '<img src="images/sample.png" width="300"><h1>いろいろテスト</h1>'
 			document.write(tag);
 			document.close();
 		}
@@ -20,7 +20,11 @@
 
 <body>
 	<script>
+
+	addEventListener("load", () => {
 		rewrite();
+	});
+	
 	</script>
 	<h1>いろいろテスト</h1>
 	<p>だみーのてきすとさん</p>
