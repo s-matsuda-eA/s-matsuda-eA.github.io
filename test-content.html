@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8" />
+
+<head>
+	<meta name="robots" content="noindex">
+	<title>色々実験場 - コンテンツ編集の適応範囲</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://d.shutto-translation.com/trans.js?id=36654"></script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		})
+		window.addEventListener("load", function () {
+			let hogeEl = document.getElementById("hoge")
+			hogeEl.classList.add("active")
+
+			let fugaEl = document.getElementById("fuga")
+			fugaEl.classList.add("active")
+			fuga.insertAdjacentHTML("afterend", "<p>ふがふがふが</p>")
+
+		})
+	</script>
+	<style>
+		.foo.active {
+			color: red;
+			font-size: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>いろいろテスト</h1>
+	<p>だみーのてきすとさん</p>
+	<div id="hoge" class="foo">hogehoge</div>
+	<div id="fuga" class="foo">fugafuga</div>
+</body>
+
+</html>
