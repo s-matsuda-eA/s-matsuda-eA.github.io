@@ -19,14 +19,16 @@
 			setTimeout(function () {
 				let fugaEl = document.getElementsByClassName("foo-2")
 				fugaEl[0].classList.add("active")
-				fugaEl[0].insertAdjacentHTML("afterend", "<p>ふがふがふが</p>")
-			}, 1000)
+				fugaEl[0].insertAdjacentHTML("afterbegin", "<p>ふがふがふが</p>")
 
+				fugaEl[1].classList.add("active")
+			}, 1000)
 		})
 	</script>
 	<style>
 		.foo-1.active,
 		.foo-2.active {
+			width: 70%;
 			color: red;
 			font-size: 10px;
 		}
@@ -40,6 +42,7 @@
 	
 		<div class="foo-1">hogehoge</div>
 		<div class="foo-2">fugafuga</div>
+		<img class="foo-2" src="images/sample.png" />
 	</div>
 </body>
 
