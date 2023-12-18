@@ -12,17 +12,18 @@
 		document.addEventListener("DOMContentLoaded", function () {
 		})
 		window.addEventListener("load", function () {
-			let hogeEl = document.getElementById("hoge")
-			hogeEl.classList.add("active")
+			let hogeEl = document.getElementsByClassName("foo-1")
+			hogeEl[0].classList.add("active")
 
-			let fugaEl = document.getElementById("fuga")
-			fugaEl.classList.add("active")
-			fuga.insertAdjacentHTML("afterend", "<p>ふがふがふが</p>")
+			let fugaEl = document.getElementsByClassName("foo-2")
+			fugaEl[0].classList.add("active")
+			fugaEl[0].insertAdjacentHTML("afterend", "<p>ふがふがふが</p>")
 
 		})
 	</script>
 	<style>
-		.foo.active {
+		.foo-1.active,
+		.foo-2.active {
 			color: red;
 			font-size: 10px;
 		}
@@ -32,8 +33,11 @@
 <body>
 	<h1>いろいろテスト</h1>
 	<p>だみーのてきすとさん</p>
-	<div id="hoge" class="foo">hogehoge</div>
-	<div id="fuga" class="foo">fugafuga</div>
+	<div id="ex">
+	
+		<div class="foo-1">hogehoge</div>
+		<div class="foo-2">fugafuga</div>
+	</div>
 </body>
 
 </html>
