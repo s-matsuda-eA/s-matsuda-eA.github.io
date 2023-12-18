@@ -9,15 +9,18 @@
 	<script src="https://sandbox-d.ea-shutto-translation.net/trans.js?id=36654"></script>
 
 	<script>
-		document.addEventListener("DOMContentLoaded", function () {
-		})
 		window.addEventListener("load", function () {
-			let hogeEl = document.getElementsByClassName("foo-1")
-			hogeEl[0].classList.add("active")
+			setTimeout(function () { 
+				let hogeEl = document.getElementsByClassName("foo-1")
+				hogeEl[0].classList.add("active") 
+			}, 1000)
 
-			let fugaEl = document.getElementsByClassName("foo-2")
-			fugaEl[0].classList.add("active")
-			fugaEl[0].insertAdjacentHTML("afterend", "<p>ふがふがふが</p>")
+
+			setTimeout(function () {
+				let fugaEl = document.getElementsByClassName("foo-2")
+				fugaEl[0].classList.add("active")
+				fugaEl[0].insertAdjacentHTML("afterend", "<p>ふがふがふが</p>")
+			}, 1000)
 
 		})
 	</script>
