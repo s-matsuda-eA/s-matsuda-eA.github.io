@@ -1,0 +1,3 @@
+#main p::after {
+	content: "▼";
+}
