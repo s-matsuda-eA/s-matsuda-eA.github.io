@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8" />
+
+<head>
+	<meta name="robots" content="noindex">
+	<title>試験用ページ</title>
+	<link rel="canonical" href="https://s-matsuda-ea.github.io/">
+	<script>
+		//=====================================================
+		// Base64形式の文字列 → <img>要素に変換
+		//   base64img: Base64形式の文字列
+		//   callback : 変換後のコールバック。引数は<img>要素
+		//=====================================================
+		function Base64ToImage(base64img, callback) {
+			var img = new Image();
+			img.onload = function () {
+				callback(img);
+			};
+			img.src = base64img;
+		}
+
+		Base64ToImage(base64Image, function (img) {
+			// <img>要素にすることで幅・高さがわかります
+			alert("w=" + img.width + " h=" + img.height);
+			// <img>要素としてDOMに追加
+			document.getElementById('main').appendChild(img);
+		});
+	</script>
+
+</head>
+
+<body>
+	<main id="main">
+	</main>
+</body>
+
+</html>

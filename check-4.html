@@ -4,15 +4,24 @@
 
 <head>
 	<meta name="robots" content="noindex">
-	<title>検証ページ3</title>
+	<title>検証ページ4</title>
 	<script src="https://d.shutto-translation.com/trans.js?id=57180"></script>
+	<script>
+		const param_q = new URL(decodeURIComponent(document.location.href)).searchParam.get("q")
+	</script>
 </head>
 
 <body>
 	<h1>いろいろ検証4</h1>
 	<p>だみーの検証4</p>
+	<p id="dynamic-param">クエリを表示: <span>none</span> </p>
 	<p>固有名詞さん<span> </span></p>
-	<img src="images/sample.png">
+<script>
+		console.log(document.location.href)
+		const qParam = new URL(decodeURIComponent(document.location.href)).searchParams
+		console.log(qParam)
+		document.querySelector("#dynamic-param>span").innerText = qParam.get("q")
+</script>
 </body>
 
 </html>
