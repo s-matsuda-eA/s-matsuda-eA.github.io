@@ -14,6 +14,14 @@
 	<p>べっ甲の杯に琥珀が沈む</p>
 	<p>刻んだ時がゆるりと溶けてゆく</p>
 	<img src="images/dammy-cat.png" alt="ダミー画像" width="200">
+	<p style="display: none;" id="hyde">隠された翡翠</p>
+	<button name="disp" onclick="displayElm()">クリック</button>
+	<script>
+		function displayElm() {
+			const el = document.getElementById("hyde")
+			el.style.display = "block"
+		}
+	</script>
 </body>
 
 </html>
