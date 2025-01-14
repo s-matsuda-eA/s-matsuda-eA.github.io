@@ -17,6 +17,11 @@
 				console.log(`kang ${event}`)
 			})
 		}, 10 * 1000)
+				setTimeout(() => {
+					__stt.get('lang', function (event) {
+						console.log(`2 kang ${event}`)
+					})
+				}, 20 * 1000)
 
 		__stt.on('selectLang', function (event) {
 			console.log(`gtagtest ${event}`)
