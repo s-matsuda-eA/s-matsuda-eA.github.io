@@ -11,12 +11,16 @@
 		__stt.on('setLangHit', function (event) {
 			console.log("gtagtest")
 		});
-				__stt.get('lang', function (event) {
+
+		setTimeout(() => {
+			__stt.get('lang', function (event) {
 				console.log(`kang ${event}`)
-			});
-			__stt.on('selectLang', function (event) {
-				console.log(`gtagtest ${event}`)
-			});
+			})
+		}, 5 * 1000)
+
+		__stt.on('selectLang', function (event) {
+			console.log(`gtagtest ${event}`)
+		});
 	</script>
 </head>
 
