@@ -6,17 +6,14 @@
 	<title>サンプル１</title>
 	<script src="https://sandbox-d.ea-shutto-translation.net/trans.js?id=67634"></script>
 	<script>
-						window.addEventListener("load", (event) => {
-			const target = document.body; // body要素を監視
+			window.addEventListener("load", (event) => {
+			const target = document.body;
 			const observer = new MutationObserver(function (mutations) {
-				// observer.disconnect(); // 監視を終了
 				console.table(mutations);
 			});
-			// 監視を開始
-						observer.observe(target, {
-				attributes: true,
+			observer.observe(target, {
 						childList: true,
-						attributes: true,
+				attributes: false,
 						characterData: false,
 			});
 					});
