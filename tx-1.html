@@ -6,25 +6,21 @@
 	<title>サンプル１</title>
 	<script src="https://sandbox-d.ea-shutto-translation.net/trans.js?id=67634"></script>
 	<script>
-		(() => {
-			'use strict';
-
+						window.addEventListener("load", (event) => {
 			const target = document.body; // body要素を監視
 			const observer = new MutationObserver(function (mutations) {
 				// observer.disconnect(); // 監視を終了
 				console.table(mutations);
 			});
-
 			// 監視を開始
-			observer.observe(target, {
-				attributes: true, // 属性変化の監視
-				childList: true, // 子ノードの変化を監視
+						observer.observe(target, {
 				attributes: true,
-				attributeFilter: ['src'],
-				characterData: false, // テキストノードの変化を監視
+						childList: true,
+						attributes: true,
+						characterData: false,
 			});
-		})();
-	</script>
+					});
+				</script>
 </head>
 
 <body>
