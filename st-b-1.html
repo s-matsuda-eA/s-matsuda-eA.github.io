@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+
+<head>
+	<meta name="robots" content="noindex">
+	<title>検証ページ１-lambda</title>
+	<script src="https://staging-d.ea-shutto-translation.net/trans.js?id=1224"></script>
+	<script>
+		__stt.on('setLangHit', function (event) {
+			console.log("gtagtest")
+		});
+
+		setTimeout(() => {
+			__stt.get('lang', function (event) {
+				console.log(`kang ${event}`)
+			})
+		}, 10 * 1000)
+				setTimeout(() => {
+					__stt.get('lang', function (event) {
+						console.log(`2 kang ${event}`)
+					})
+				}, 20 * 1000)
+
+		__stt.on('selectLang', function (event) {
+			console.log(`gtagtest ${event}`)
+		});
+	</script>
+</head>
+
+<body>
+	<h1>いろいろ検証１</h1>
+	<p>クエリが長い</p>
+	<p><a href="https://s-matsuda-ea.github.io/check-3.html">絶対パスリンク</a></p>
+	<img src="images/sample.png">
+</body>
+
+</html>
