@@ -30,12 +30,19 @@
 
 <body>
 	<h1>13:00 <span class="xxx-yyy">てすてす</span></h1>
-	<button>変化</button>
+	<button id="btn1">変化</button>
+	<button id="btn2">変化2</button>
 	<script>
-		document.querySelector('button').addEventListener('click', function () {
+			document.querySelector('button#btn1').addEventListener('click', function () {
 			document.querySelector('h1').innerHTML = '14:00 <span class="xxx-yyy">てすてす</span>';
 		});
 	</script>
+	<script>
+		document.querySelector('button#btn2').addEventListener('click', function () {
+			document.querySelector('h1').innerHTML = '15:00 <span class="xxx-yyy">ほげほげ</span>';
+		});
+	</script>
+
 	<p>クエリが長い</p>
 	<p><a href="https://s-matsuda-ea.github.io/check-3.html">絶対パスリンク</a></p>
 	<img src="images/sample.png">
