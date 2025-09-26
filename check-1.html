@@ -5,7 +5,7 @@
 <head>
 	<meta name="robots" content="noindex">
 	<title>検証ページ１</title>
-	<script src="https://staging-d.ea-shutto-translation.net/trans.js?id=1272"></script>
+	<script src="https://sandbox-d.ea-shutto-translation.net/trans.js?id=77346"></script>
 	<script>
 		__stt.on('setLangHit', function (event) {
 			console.log("gtagtest")
@@ -30,6 +30,12 @@
 
 <body>
 	<h1>いろいろ検証１</h1>
+	<button>変化</button>
+	<script>
+		document.querySelector('button').addEventListener('click', function () {
+			document.querySelector('h1').textContent = 'ほげ';
+		});
+	</script>
 	<p>クエリが長い</p>
 	<p><a href="https://s-matsuda-ea.github.io/check-3.html">絶対パスリンク</a></p>
 	<img src="images/sample.png">
