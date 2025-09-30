@@ -5,7 +5,7 @@
 <head>
 	<meta name="robots" content="noindex">
 	<title>検証ページ１</title>
-	<script src="https://sandbox-d.ea-shutto-translation.net/trans.js?id=77346"></script>
+<script src="https://d.shutto-translation.com/trans.js?id=78667"></script>
 	<script>
 		__stt.on('setLangHit', function (event) {
 			console.log("gtagtest")
@@ -29,17 +29,19 @@
 </head>
 
 <body>
-	<h1>13:00 <span class="xxx-yyy">てすてす</span></h1>
+	<h1><span id="time">13:00</span> <span class="xxx-yyy">てすてす</span></h1>
 	<button id="btn1">変化</button>
 	<button id="btn2">変化2</button>
 	<script>
 			document.querySelector('button#btn1').addEventListener('click', function () {
-			document.querySelector('h1').innerHTML = '14:00 <span class="xxx-yyy">てすてす</span>';
+				document.querySelector('#time').textContent = '14:00';
+				document.querySelector('.xxx-yyy').textContent = 'てすてす';
 		});
 	</script>
 	<script>
 		document.querySelector('button#btn2').addEventListener('click', function () {
-			document.querySelector('h1').innerHTML = '15:00 <span class="xxx-yyy">ほげほげ</span>';
+			document.querySelector('#time').textContent = '15:00';
+			document.querySelector('.xxx-yyy').textContent = 'ほげほげ';
 		});
 	</script>
 
