@@ -5,7 +5,7 @@
 <head>
 	<meta name="robots" content="noindex">
 	<title>検証ページ１</title>
-<script src="https://d.shutto-translation.com/trans.js?id=78696"></script>
+	<script src="https://sandbox-d.ea-shutto-translation.net/trans.js?id=79653"></script>
 	<script>
 		__stt.on('setLangHit', function (event) {
 			console.log("gtagtest")
@@ -30,24 +30,9 @@
 
 <body>
 	<h1><span id="time">13:00</span> <span class="xxx-yyy">てすてす</span></h1>
-	<button id="btn1">変化</button>
-	<button id="btn2">変化2</button>
-	<script>
-			document.querySelector('button#btn1').addEventListener('click', function () {
-				document.querySelector('#time').textContent = '14:00';
-				document.querySelector('.xxx-yyy').textContent = 'てすてす';
-		});
-	</script>
-	<script>
-		document.querySelector('button#btn2').addEventListener('click', function () {
-			document.querySelector('#time').textContent = '15:00';
-			document.querySelector('.xxx-yyy').textContent = 'ほげほげ';
-		});
-	</script>
-
-	<p>クエリが長い</p>
-	<p><a href="https://s-matsuda-ea.github.io/check-3.html">絶対パスリンク</a></p>
-	<img src="images/sample.png">
+	<a href="http://s-matsuda-ea.github.io/check-2.html#123">リンクテスト：ハッシュ付きフルパス</a>
+	<a href="check-2.html#123">リンクテスト；ハッシュ付き相対パス</a>
+	<a href="./check-2.html#123">リンクテスト；ハッシュ付き相対パス</a>
 </body>
 
 </html>
